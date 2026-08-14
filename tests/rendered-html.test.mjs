@@ -26,6 +26,9 @@ test("음원 등록 가이드의 핵심 내용을 서버에서 렌더링한다",
   assert.match(html, /저작권과 권리는 따로 챙겨야 해요/);
   assert.match(html, /제출 직전, 이것만 체크하세요/);
   assert.match(html, /자주 묻는 질문/);
+  assert.match(html, /https:\/\/distrokid\.com\/vip\/seven\/13133736/);
+  assert.match(html, /첫해 요금의 7%를 할인/);
+  assert.match(html, /rel="sponsored noreferrer"/);
 });
 
 test("스타터 미리보기 흔적이 남아 있지 않다", async () => {

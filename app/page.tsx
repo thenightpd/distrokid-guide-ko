@@ -12,6 +12,8 @@ const official = {
   pro: "https://support.distrokid.com/hc/ko/articles/360013534514-DistroKid%EB%8A%94-BMI-ASCAP-%EB%98%90%EB%8A%94-%EB%8B%A4%EB%A5%B8-PRO-%EA%B3%B5%EC%97%B0%EA%B6%8C-%EA%B4%80%EB%A6%AC%EB%8B%A8%EC%B2%B4-%EC%97%90-%EB%93%B1%EB%A1%9D%ED%95%98%EB%82%98%EC%9A%94-%EC%95%84%ED%8B%B0%EC%8A%A4%ED%8A%B8%EB%A1%9C%EC%84%9C-%EC%A0%9C%EA%B0%80-%ED%95%B4%EC%95%BC-%ED%95%98%EB%82%98%EC%9A%94",
 };
 
+const referralLink = "https://distrokid.com/vip/seven/13133736";
+
 const nav = [
   ["summary", "한눈에 보기"],
   ["distribution", "음원 유통이 뭐예요?"],
@@ -138,7 +140,11 @@ export default function Home() {
             <div className="choice-box">
               <div><span className="mini-title">처음 한 곡을 예약 발매한다면</span><h3>Musician Plus가 편해요.</h3></div>
               <p>가장 저렴한 Musician 플랜은 곡이 준비되는 대로 발매되는 방식이에요. 원하는 날짜를 정해서 발매하고 싶다면 Musician Plus 이상이 필요합니다. 가격과 포함 기능은 결제 직전 공식 페이지에서 한 번 더 확인하세요.</p>
-              <SourceLink href={official.pricing}>최신 요금제 확인하기</SourceLink>
+              <div className="choice-actions">
+                <a className="button referral" href={referralLink} target="_blank" rel="sponsored noreferrer">첫해 7% 할인받고 시작하기 ↗</a>
+                <SourceLink href={official.pricing}>최신 요금제 확인하기</SourceLink>
+              </div>
+              <p className="referral-disclosure">위 할인 가입 링크는 레퍼럴 링크입니다. 링크로 가입하면 첫해 요금의 7%를 할인받고, 가이드 운영자에게 추천 보상이 지급될 수 있습니다.</p>
             </div>
             <p className="updated">마지막 내용 확인일 2026년 8월 14일. 요금과 정책은 바뀔 수 있습니다.</p>
           </section>
@@ -273,11 +279,12 @@ export default function Home() {
           </section>
 
           <section className="final-cta">
-            <p>준비가 다 됐다면</p><h2>첫 발매는 완벽함보다<br />정확함이 더 중요해요.</h2><p>음원, 이름, 권리, 날짜. 이 네 가지만 차분하게 확인하고 시작해 보세요.</p>
-            <div><a className="button dark" href="https://distrokid.com/new" target="_blank" rel="noreferrer">DistroKid 업로드 화면 열기 ↗</a><a className="button ghost" href="#checklist">체크리스트 다시 보기</a></div>
+            <p>준비가 다 됐다면</p><h2>첫 발매는 완벽함보다<br />정확함이 더 중요해요.</h2><p>음원, 이름, 권리, 날짜. 이 네 가지만 차분하게 확인하고 시작해 보세요. 아래 링크로 처음 가입하면 첫해 요금의 7%를 할인받을 수 있어요.</p>
+            <div><a className="button dark" href={referralLink} target="_blank" rel="sponsored noreferrer">7% 할인받고 DistroKid 시작하기 ↗</a><a className="button ghost" href="#checklist">체크리스트 다시 보기</a></div>
+            <small className="referral-note">레퍼럴 링크를 통한 유료 가입이 이루어지면 가이드 운영자에게 추천 보상이 지급될 수 있습니다.</small>
           </section>
 
-          <footer><p>이 페이지는 DistroKid와 제휴하지 않은 교육용 가이드입니다. 실제 결제와 제출 전에는 반드시 공식 화면의 최신 가격, 지원 플랫폼, 약관을 확인하세요.</p><div><SourceLink href="https://support.distrokid.com/hc/ko">DistroKid 한국어 고객센터</SourceLink><a href="#top">맨 위로 ↑</a></div></footer>
+          <footer><p>이 페이지는 DistroKid의 공식 사이트가 아닌 교육용 가이드입니다. 일부 가입 링크는 레퍼럴 링크이며, 이를 통한 가입 시 운영자에게 추천 보상이 지급될 수 있습니다. 실제 결제와 제출 전에는 반드시 공식 화면의 최신 가격, 지원 플랫폼, 약관을 확인하세요.</p><div><SourceLink href="https://support.distrokid.com/hc/ko">DistroKid 한국어 고객센터</SourceLink><a href="#top">맨 위로 ↑</a></div></footer>
         </article>
       </div>
     </main>
