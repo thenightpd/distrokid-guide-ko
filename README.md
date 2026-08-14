@@ -15,4 +15,6 @@ npm run dev
 npm test
 ```
 
+`npm test`는 GitHub Pages에 올릴 정적 파일도 `docs` 폴더에 함께 만듭니다.
+
 내용은 2026년 8월 14일 기준으로 확인했습니다. 요금과 정책은 바뀔 수 있으므로 실제 결제와 제출 전 DistroKid 공식 안내를 다시 확인해야 합니다.
